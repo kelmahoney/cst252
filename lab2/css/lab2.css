@@ -53,7 +53,7 @@ p {
 
 img {
   float: center;
-  width: 400px;
+  width: 100%;
   height: auto;
   box-shadow: 6px 8px 15px #505f1c;
 
@@ -69,5 +69,6 @@ img {
 }
 #column{
   column-count:2;
+
 
 }
