@@ -7,9 +7,9 @@
 var myTransport = ["Prius", "Bike", "riding with friends", "Bus"
       ];
 var myMainRide = {
-      make : "Prius",
-      model : "Toyota",
-      color : "white",
+      make : "Toyota",
+      model : "Prius",
+      color : "White",
       year : 2012,
       age : function() {
           return 2022 - age;
