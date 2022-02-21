@@ -12,7 +12,7 @@ var myMainRide = {
       color : "White",
       year : 2012,
       age : function() {
-          return 2022 - age;
+          return 2022 - year;
       }
 }
 
