@@ -3,6 +3,8 @@
  * Created:   2.24.2022
  */
 
+ var outputEl = document.getElementById("output");
+
  function isEven(x){
     return (x % 2 == 0);
  }
@@ -24,5 +26,6 @@
  console.log("Squareroot of array:", result);
 
  //output
- document.writeln(" ",
-      sortUserName(), "</br>");
+ var newEl = document.createElement("p");
+ newEl.innerHTML = "Evenness of array:" + JSON.stringify(result);
+ outputEl.appendChild(newEl);
