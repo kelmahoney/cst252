@@ -6,7 +6,7 @@
 // assigned to variable
 var oneEl = document.getElementById("output");
 var twoEl = document.createElement("button");
-// the variable
+// find the variable
 oneEl.appendChild(twoEl);
 
 twoEl.id = "button";
