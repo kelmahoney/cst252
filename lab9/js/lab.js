@@ -3,10 +3,10 @@
  * Created:   3.1.2022
  */
 
-// assigned to variable
+// fine element
 var oneEl = document.getElementById("output");
 var twoEl = document.createElement("button");
-// find the variable
+// creat element
 oneEl.appendChild(twoEl);
 
 twoEl.id = "button";
