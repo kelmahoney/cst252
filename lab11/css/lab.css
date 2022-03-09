@@ -1,0 +1,35 @@
+.my-button{
+  background-color: #556b2f;
+  border-color: white;
+  border-style: dotted;
+  color: white;
+  font-family: sans-serif, Helvetica;
+  font-size: 30px;
+  border-radius: 12px;
+  padding:10px;
+}
+
+h1{
+font-size: 50px;
+text-decoration: underline;
+}
+
+h2{
+font-size: 40px;
+}
+
+p{
+font-size: 25px;
+font-style: italic;
+}
+
+#box{
+  background-color:#4F5843;
+  color: white;
+  font-family: sans-serif, Helvetica;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+}
