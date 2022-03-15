@@ -1,0 +1,13 @@
+#box{
+  background-color: lightblue;
+}
+
+img{
+  width: 300px;
+  height: inherit;
+}
+
+li{
+  color: darkblue;
+  
+}
