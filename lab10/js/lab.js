@@ -1,39 +1,63 @@
 /*
  * Author: Kelly Mahoney
- * Created: 3.6.2022
+ * Created: 3.21.2022
+ * Credit: Wes Modes
  * License: Public Domain
  */
 
-function sortUserName() {
-//split string to array
-var nameArray = userName.split('');
-console.log("nameArray =", nameArray);
-//sort the array
-var nameArraySort = nameArray.sort();
-console.log("nameArraySort =", nameArraySort);
-// join array back to a string
-var nameSorted = nameArraySort.join('');
-console.log("nameSorted =", nameSorted);
-return nameSorted;
-  }
+// shuffleArray - take an array and shuffle the contents
+// Thanks to https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+function shuffleArray(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
 
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+    return array;
+}
 
-// find
+// sortUserName - a function that takes user input and sorts the letters
+// of their name
+function reorderUserName(word) {
+    var wordArray = word.toLowerCase().split('');
+    var newArray = shuffleArray(wordArray);
+    return newArray.join('');
+}
+
+// given a string, return string in Title Case
+// thanks to https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
+function toTitleCase(str) {
+    return str.replace(
+        /\w\S*/g,
+        function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        }
+    );
+}
+
+// find the button element
 buttonEl = document.getElementById("my-button");
 console.log("button element:", buttonEl);
-// form
+// find the form element
 inputEl = document.getElementById("user-name");
 console.log("input element:", inputEl);
-// find output
+// find output element
 outputEl = document.getElementById("output");
 console.log("output element:", outputEl);
 
-// add event listener
+// add an event listener to button
 buttonEl.addEventListener("click", function(){
-// get value
-var nameArraySort = inputEl.value;
-// modify
-var nameSort = sortUserName(reorderUserName(nameArraySort));
-// value in output
-outputEl.innerHTML = "<p id=name-results>" + nameSorted + "</p>";
+  // get value from name element
+  var userName = inputEl.value;
+  // modify value - either sort or shuffle
+  var newName = toTitleCase(reorderUserName(userName));
+  // put value in output element
+  outputEl.innerHTML = "<p id=name-results>" + newName + "</p>";
 });
