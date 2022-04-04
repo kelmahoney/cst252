@@ -4,39 +4,32 @@
  * License: Public Domain
  */
 
-function fizzbuzzboom(maxNums, factorObj){
-    for (var num=0; num<maxNum; num++) {
-      var outputStr = "";
-      for (var factor in factorObj){'
-        if (num% factor == 0){
-          outputStr += factorObj[factor];
-        }
-      }
-      if (outputStr){
-          outputStr = " - " + outputStr + "!";
-      }
-      outputToPage(num.toString() + outputStr)
-    }
-}
-function reportError(str) {
-    outputEl.innerHTML = "<div class='error'>" + str + "</div>";
-}
+for ( i = 1; i <= 200; i++) {
+     var buildStr = "";
 
-document.getElementById("submit").addEventListener("click", function() {
-    var max = document.getElementById("max").value;
-    console.log("max:", max);
-    if (! max) {
-        reportError("You must provide a maximum");
-        return;
-    }
-    var factorObj = getFactorObj();
-    console.log("factorObj:", factorObj);
-    if (Object.keys(factorObj).length === 0) {
-        reportError("You must provide at least one factor and text");
-        return;
-    }
-    // clear error if there is one
-    outputEl.innerHTML = "";
-    fizzBuzzBoom(max, factorObj);
-    outputEl.classList.add("cols");
-})
+
+     // If the number is a multiple of 7,
+     // print “Boom” instead of the number.
+     if (i % 10 == 0) {
+         buildStr += "Boom";
+     }
+     // If the number is a multiple of 5,
+     // print “Buzz” instead of the number.
+     if (i % 6 == 0) {
+         buildStr += "Buzz";
+     }
+     // If the number is a multiple of 3,
+     // print “Fizz” instead of the number.
+     if (i % 2 == 0) {
+         buildStr += "Fizz";
+     }
+
+     if (buildStr != "") {
+         console.log(buildStr + "!");
+         $("#output").append("<p>" + buildStr + "!");
+     }
+     else {
+         console.log(i);
+         $("#output").append("<p>" + i)
+     }
+   }
