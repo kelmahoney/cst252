@@ -1,0 +1,17 @@
+
+#box{
+  background-color: lightpink;
+  padding-top: 75px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#output{
+  border: solid 1px black;
+  padding: 20px;
+
+}
+img{
+  width: 400px;
+  padding: 18px;
+}
