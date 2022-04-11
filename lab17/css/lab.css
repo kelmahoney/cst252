@@ -1,0 +1,35 @@
+
+#box{
+  background-color: pink;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 75px;
+  padding-right: 75px;
+  width: inherit;
+  border: solid 10px hotpink;
+  font-family: "Trirong", serif;
+}
+#output{
+  border: solid 4px hotpink;
+  padding: 20px;
+  color:white;
+  font-size: 20px
+}
+img{
+  width: 400px;
+  padding: 7px;
+
+}
+h1{
+  color: white;
+  font-size: 50px;
+}
+h2{
+  color: white;
+  font-size: 35px;
+
+}
+p{
+  color: hotpink;
+  font-size: 20px;
+}
