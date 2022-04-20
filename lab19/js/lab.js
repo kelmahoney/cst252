@@ -2,11 +2,9 @@
  * Author: Kelly Mahoney
  * Created: 4.19.2022
  * License: Public Domain
+ * credit: wes modes
  */
- // Pick an URL from the numbers API: http://numbersapi.com/
-//var url = "http://numbersapi.com/random/trivia";
-//var url = "https://cataas.com/cat?json=true";
-//var domain = "https://cataas.com";
+ 
 var url = "https://api.nasa.gov/planetary/apod";
 var apiKey = "CrRSg5Bgo1pZ3hPTGmkOb1NGsfcserHoc8ZFdB7t";
 

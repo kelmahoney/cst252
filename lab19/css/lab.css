@@ -8,8 +8,15 @@
   width: inherit;
   border: solid 10px hotpink;
   font-family: "Trirong", serif;
+
 }
 #output {
-  height: 200px;
-  border: solid 1px red;
+  height: 800px;
+  border: solid 2px hotpink;
+}
+button{
+  background-color: hotpink;
+  color:white;
+  border-radius: 5px;
+  border-color: hotpink;
 }
