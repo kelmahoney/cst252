@@ -1,45 +1,21 @@
 /*
  * Author: Kelly Mahoney
- * Created: 4.19.2022
+ * Created: 4.26.2022
  * License: Public Domain
- * credit: wes modes
- */
- 
-var url = "https://api.nasa.gov/planetary/apod";
-var apiKey = "CrRSg5Bgo1pZ3hPTGmkOb1NGsfcserHoc8ZFdB7t";
+ (c) http://numbersapi.com/#random/trivia
+*/
 
-// When a user clicks the button
-$("#press-me").click(getAjax);
+function showNumber(str) {
+       document.getElementById('number-fact').innerText = str;
+   }
 
-// use a jQuery AJAX call to fetch output from the numbers API
-function getAjax() {
-  // Using the core $.ajax() method
-  $.ajax({
-      // The URL for the request
-      url: url,
-      // The data to send (will be converted to a query string)
-      data: {
-      	api_key: apiKey,
-        count: 1
-      },
-      // Whether this is a POST or GET request
-      type: "GET",
-      // The type of data we expect back
-      // dataType : "json",
-  })
-  // If the request succeeds
-  .done(function( data ) {
-      //alert("Success!");
-      thisData = data[0];
-      console.log(data);
-      fullUrl = thisData.url;
-      // Insert the output in the output div
+   (function() {
+       var scriptTag = document.createElement('script');
+       scriptTag.async = true;
+       scriptTag.src = "http://numbersapi.com/42/math?callback=showNumber";
+       document.body.appendChild(scriptTag);
+   })();
 
-      $("#output").html("<h3>" + thisData.title);
-      $("#output").append("<img src=" + fullUrl + ">");
-  })
-  // If the request fails
-  .fail(function( xhr, status, errorThrown ) {
-      console.log(errorThrown + " Status:" + status );
-  });
-}
+$.get('http://numbersapi.com/1337/trivia?notfound=floor&fragment', function(data) {
+    $('#number').text(data);
+});
